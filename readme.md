@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="art.jpg" alt="art" width="400"/><br>
+  <img src="art.jpg" alt="art" width="800"/><br>
 </p>
 
 # ArtlistIO Stock Footage
