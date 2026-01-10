@@ -27,7 +27,6 @@ ArtlistIO is a simple tool to extract and convert `.m3u8` streams from websites 
 
 ## Requirements
 
-- Windows 10/11  
 - Python 3.10+  
 - Pipenv  
 
