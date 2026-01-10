@@ -1,7 +1,7 @@
 # ArtlistIO Stock Footage
 
 **Author:** Mu_rpy  
-**Platform:** Windows only (currently)
+**Platform:** Windows & MacOS (currently)
 
 ArtlistIO is a simple tool to extract and convert `.m3u8` streams from websites to MP4 using FFmpeg and Playwright.  
 
@@ -36,13 +36,13 @@ playwright
 
 1. Go to the [Releases](https://github.com/da036b97b7c705909d6ffbd2e3349128/ArtlistIO-stock-footage-extractor/releases) page and download the latest release ZIP.
 
-2. Open start.bat (automated setup & run).
+2. Open start.bat or start.sh (automated setup & run).
 
-The batch file will:
+The batch or SH file will:
 
     - Check if Python is installed
 
-    - If not, run your Python installer from python_redist/ folder
+    - If not, run your Python installer from redist/ folder
 
     - Install Pipenv and project dependencies
 
@@ -59,7 +59,7 @@ http://127.0.0.1:8000
 4. Enter a URL and choose resolution, then click Convert. The converted video will appear in the videos/ folder automatically.
 
 Notes:
-- Currently only tested on Windows.
+- Currently only tested on Windows, should also work in macOS.
 
 - Do not commit large video files; the repo tracks videos/ in .gitignore.
 
