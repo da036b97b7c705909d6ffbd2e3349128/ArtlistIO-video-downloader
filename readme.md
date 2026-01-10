@@ -1,4 +1,4 @@
-![art](art.png)_
+![art](art.jpg)_
 
 # ArtlistIO Stock Footage
 
