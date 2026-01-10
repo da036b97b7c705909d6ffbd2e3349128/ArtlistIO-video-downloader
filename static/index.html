@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ArtlistIO Stock Footage</title>
+<link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<div class="blob-bg"></div>
+
+<div class="container">
+    <h1>ArtlistIO Stock Footage</h1>
+    <input id="url" placeholder="Enter m3u8 or page URL">
+    <select id="res">
+        <option value="2160">2160p (4K)</option>
+        <option value="1080">1080p</option>
+        <option value="720">720p</option>
+        <option value="480">480p</option>
+    </select>
+    <button id="convertBtn">Convert</button>
+</div>
+
+<script>
+document.getElementById('convertBtn').onclick = () => {
+    const url = document.getElementById('url').value;
+    const resolution = document.getElementById('res').value;
+    if (!url) return;
+    const ws = new WebSocket("ws://127.0.0.1:8000/ws");
+    ws.onopen = () => {
+        ws.send(JSON.stringify({url, resolution}));
+        ws.close();
+    };
+};
+</script>
+</body>
+</html>
