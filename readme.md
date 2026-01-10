@@ -17,7 +17,7 @@ ArtlistIO is a simple tool to extract and convert `.m3u8` streams from websites 
 
 ## Features
 
-- Convert `.m3u8` or page URLs into MP4  
+- Works for most trademarked websites
 - Choose resolution (2160p / 1080p / 720p / 480p)  
 - Automatically saves videos into a `videos/` folder  
 - Opens the folder automatically when conversion finishes  
