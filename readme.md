@@ -1,4 +1,7 @@
-![art](art.jpg)_
+<p align="center">
+  <img src="art.jpg" alt="art" width="400"/><br>
+  This is some centered caption text.
+</p>
 
 # ArtlistIO Stock Footage
 
