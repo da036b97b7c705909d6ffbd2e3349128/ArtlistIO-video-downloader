@@ -12,7 +12,9 @@ ArtlistIO is a simple tool to extract and convert `.m3u8` streams from websites 
 > [!WARNING]
 > This is for educational purposes only.
 > By continuing to use this, you accept the risks and acknowledge that you have been warned.
-> This is not theft, the m3u8 files are sent to the user's browser, this script simply converts said file into mp4s. Suck it.
+
+> [!NOTE]
+> This is not theft! The m3u8 files are sent to the user's browser via json payload, this script simply reconstructs said file into mp4s. Suck it.
 
 ---
 
