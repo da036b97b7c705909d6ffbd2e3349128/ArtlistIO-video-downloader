@@ -42,7 +42,6 @@ The setup will:
 1. If using the ZIP, run start.bat.
 2. If it crashes you're gonna have to do `pip install playwright` then rerun the start.bat again. (The piplock file doesnt have playwright in it)
 
----
 
 ### macOS
 
@@ -60,8 +59,6 @@ The setup will:
     - Install all dependencies and launch the server.
 
 6. Access the UI at http://127.0.0.1:8000.
-
----
 
 ### Linux systems
 Still working on a script for linux users, but for now you can follow the same format as the macOS zip.
