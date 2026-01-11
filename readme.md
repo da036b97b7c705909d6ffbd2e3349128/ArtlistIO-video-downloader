@@ -25,22 +25,9 @@ ArtlistIO is a simple tool to extract and convert `.m3u8` streams from websites 
 
 ---
 
-## Requirements
-
-- Python 3.10+  
-- Pipenv  
-
-All Python dependencies are tracked in `Pipfile`:
-
-```text
-fastapi
-uvicorn
-playwright
-```
-
 ## Installation & Usage
 
-# Windows
+### Windows
 Go to the [Releases](https://github.com/da036b97b7c705909d6ffbd2e3349128/ArtlistIO-video-downloader/releases) page and download the latest Windows installer (.exe) or ZIP.
 
 **Using Setup.exe (Recommended)**
@@ -57,7 +44,7 @@ The setup will:
 
 ---
 
-# macOS
+### macOS
 
 1. Download the latest macOS ZIP from the [Releases](https://github.com/da036b97b7c705909d6ffbd2e3349128/ArtlistIO-video-downloader/releases) page.
 
@@ -73,6 +60,13 @@ The setup will:
     - Install all dependencies and launch the server.
 
 6. Access the UI at http://127.0.0.1:8000.
+
+---
+
+### Linux systems
+Still working on a script for linux users, but for now you can follow the same format as the macOS zip.
+Just replace the chromium & ffmpeg folders with ones that support your distro. Then chmod x+ the start.sh
+
 
 ---
 
