@@ -17,11 +17,11 @@ ArtlistIO is a simple tool to extract and convert `.m3u8` streams from websites 
 
 ## Features
 
-- Works for most trademarked websites
+- Works for most stock footage websites
 - Choose resolution (2160p / 1080p / 720p / 480p)  
-- Automatically saves videos into a `videos/` folder  
+- Automatically saves videos into the user's `videos/` folder  
 - Opens the folder automatically when conversion finishes  
-- Minimal, responsive, yellow-themed UI  
+- Minimal, responsive, yellow-themed UI 
 
 ---
 
@@ -40,35 +40,46 @@ playwright
 
 ## Installation & Usage
 
+# Windows
+Go to the [Releases](https://github.com/da036b97b7c705909d6ffbd2e3349128/ArtlistIO-video-downloader/releases) page and download the latest Windows installer (.exe) or ZIP.
 
-1. Go to the [Releases](https://github.com/da036b97b7c705909d6ffbd2e3349128/ArtlistIO-stock-footage-extractor/releases) page and download the latest release ZIP.
+**Using Setup.exe (Recommended)**
+1. If using the latest version. run the setup file.
+The setup will:
+    - Verify Python installation.
+    - Install dependencies via Pipenv.
+    - Launch the local web server and open your browser to http://127.0.0.1:8000.
+    - Enter the Artlist URL, select your resolution, and click Convert. The video will appear in your Videos/ArtlistVideos folder automatically.
 
-2. Open start.bat or start.sh (automated setup & run).
+**Using start.bat (Experimental)**
+1. If using the ZIP, run start.bat.
+2. If it crashes you're gonna have to do `pip install playwright` then rerun the start.bat again. (The piplock file doesnt have playwright in it)
 
-The batch or SH file will:
+---
 
-    - Check if Python is installed
+# macOS
 
-    - If not, run your Python installer from redist/ folder
+1. Download the latest macOS ZIP from the [Releases](https://github.com/da036b97b7c705909d6ffbd2e3349128/ArtlistIO-video-downloader/releases) page.
 
-    - Install Pipenv and project dependencies
+2. Extract the folder and open a Terminal in that directory.
 
-    - Install Playwright browsers
+3. Run the following command to give the script permission to run: `chmod +x start.command`
 
-    - Start the FastAPI server
+4. Double-click start.command.
 
-3. Open your browser and go to:
+5. The script will:
+    - Display the License agreement (type yes to continue).
+    - Check for Homebrew and Python (will install them automatically if missing).
+    - Install all dependencies and launch the server.
 
-```cpp
-http://127.0.0.1:8000
-```
+6. Access the UI at http://127.0.0.1:8000.
 
-4. Enter a URL and choose resolution (default is 4K), then click Convert. The converted video will appear in the videos/ folder automatically.
+---
 
 Notes:
 - Currently only tested on Windows, should also work in macOS.
-
 - Do not commit large video files; the repo tracks videos/ in .gitignore.
+- The website will be active unil you shutdown manually (via website button), end task it, or shutdown/reboot your device.
 
 ---
 
