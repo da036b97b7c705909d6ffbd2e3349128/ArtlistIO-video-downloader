@@ -1,4 +1,4 @@
-# ArtlistIO Stock Footage
+# ArtlistIO Video Downloader
 
 **Author:** Mu_rpy  
 **Platform:** Windows & MacOS (currently)
