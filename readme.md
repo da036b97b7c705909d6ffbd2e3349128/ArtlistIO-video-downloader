@@ -23,8 +23,6 @@ ArtlistIO is a simple tool to extract and convert `.m3u8` streams from websites 
 - Opens the folder automatically when conversion finishes  
 - Minimal, responsive, yellow-themed UI 
 
----
-
 ## Installation & Usage
 
 ### Windows
@@ -64,10 +62,7 @@ The setup will:
 Still working on a script for linux users, but for now you can follow the same format as the macOS zip.
 Just replace the chromium & ffmpeg folders with ones that support your distro. Then chmod x+ the start.sh
 
-
----
-
-Notes:
+## Notes:
 - Currently only tested on Windows, should also work in macOS.
 - Do not commit large video files; the repo tracks videos/ in .gitignore.
 - The website will be active unil you shutdown manually (via website button), end task it, or shutdown/reboot your device.
