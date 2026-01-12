@@ -1,0 +1,6 @@
+source-code-1.2/MacOS/src/ffmpeg/** filter=lfs diff=lfs merge=lfs -text
+source-code-1.2/Windows/ffmpeg/** filter=lfs diff=lfs merge=lfs -text
+source-code-1.2/MacOS/src/Brave-Browser/** filter=lfs diff=lfs merge=lfs -text
+source-code-1.2/Windows/Brave-Browser/** filter=lfs diff=lfs merge=lfs -text
+**/build/** filter=lfs diff=lfs merge=lfs -text
+**/dist/** filter=lfs diff=lfs merge=lfs -text
