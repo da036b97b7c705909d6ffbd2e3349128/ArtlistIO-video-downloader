@@ -42,7 +42,7 @@ Go to the [Releases](https://github.com/da036b97b7c705909d6ffbd2e3349128/Artlist
 
 2. Extract the folder and open a Terminal in that directory.
 
-3. Run the following command to give the script permission to run: `chmod +x start.command`
+3. Run the following command **once** to give the script permission to run: `chmod +x start.sh`
 
 4. Double-click start.command.
 
