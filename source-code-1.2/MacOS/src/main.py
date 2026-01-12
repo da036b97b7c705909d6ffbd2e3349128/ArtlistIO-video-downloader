@@ -142,4 +142,4 @@ def debug_mode():
 
 if __name__ == "__main__":
     # debug_mode()
-    config()
+    pass

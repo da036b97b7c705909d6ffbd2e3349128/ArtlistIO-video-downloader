@@ -15,12 +15,10 @@ echo ""
 
 read -p "Do you accept these terms? (yes/no): " choice
 if [ "$choice" != "yes" ]; then
-    echo "License not accepted. Exiting..."
     exit 1
 fi
 
 if ! command -v python3 &> /dev/null; then
-    echo "Python not found. Starting initial setup..."
     if ! command -v brew &> /dev/null; then
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         if [[ $(uname -m) == "arm64" ]]; then
@@ -32,15 +30,13 @@ if ! command -v python3 &> /dev/null; then
     brew install python
 fi
 
-cd src
-
 if ! command -v pipenv &> /dev/null; then
     python3 -m pip install --user pipenv
-    PATH="$PATH:$(python3 -m site --user-base)/bin"
+    export PATH="$PATH:$(python3 -m site --user-base)/bin"
 fi
 
-pipenv install --deploy --ignore-pipfile
+chmod -R +x "ffmpeg" 2>/dev/null
+chmod -R +x "Brave-Browser" 2>/dev/null
 
-export PYTHONPATH=$PYTHONPATH:$(pwd)
-chmod +x "src/Brave-Browser/Contents/MacOS/Brave Browser"
-pipenv run python3 app.py
+pipenv install
+pipenv run python3 src/app.py

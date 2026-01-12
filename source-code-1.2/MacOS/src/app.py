@@ -1,10 +1,9 @@
 from fastapi import FastAPI, WebSocket
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
-import threading, asyncio, os, sys, subprocess, webbrowser, uvicorn, signal
-from main import finalize
+import threading, asyncio, os, sys, subprocess, webbrowser, uvicorn, signal, platform
+from main import finalize, VIDEO_DIR
 from threading import Timer
-
 
 def resource_path(relative_path):
     try:
@@ -23,7 +22,6 @@ def index():
     with open(index_path, "r", encoding="utf-8") as f:
         return f.read()
 
-
 class Logger:
     def __init__(self, ws, loop):
         self.ws = ws
@@ -34,14 +32,13 @@ class Logger:
 
     def success(self):
         asyncio.run_coroutine_threadsafe(self.ws.send_text("Conversion successful!"), self.loop)
-        folder = os.path.join(os.getcwd(), "videos")
-        if not os.path.exists(folder):
-            os.makedirs(folder)
-        os.startfile(folder)
+        if platform.system() == "Darwin":
+            subprocess.Popen(["open", VIDEO_DIR])
+        else:
+            os.startfile(VIDEO_DIR)
 
     def fail(self):
         asyncio.run_coroutine_threadsafe(self.ws.send_text("Conversion failed!"), self.loop)
-
 
 @app.websocket("/ws")
 async def ws_endpoint(ws: WebSocket):
@@ -58,9 +55,8 @@ async def ws_endpoint(ws: WebSocket):
 
         ws_logger("Searching for video stream...")
         try:
-            if finalize(resolution, url): logger.success()
+            if finalize(resolution, url, logger=ws_logger): logger.success()
             else: logger.fail()
-            
         except Exception as e:
             ws_logger(f"Error: {str(e)}")
             logger.fail()
