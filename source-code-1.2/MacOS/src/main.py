@@ -3,7 +3,7 @@ from playwright.sync_api import sync_playwright
 
 BRAVE_EXE_PATH = os.path.abspath(os.path.join("Brave-Browser", "Contents", "MacOS", "Brave Browser"))
 FFMPEG_PATH = os.path.abspath(os.path.join("ffmpeg", "bin", "ffmpeg"))
-VIDEO_DIR = os.path.join(os.path.expanduser("~"), "Videos", "ArtlistVideos")
+VIDEO_DIR = os.path.join(os.path.expanduser("~"), "Movies", "ArtlistVideos")
 os.makedirs(VIDEO_DIR, exist_ok=True)
 
 SUPPORTED_RESOLUTIONS = {
