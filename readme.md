@@ -28,13 +28,8 @@ ArtlistIO is a simple tool to extract and convert `.m3u8` streams from websites 
 ### Windows
 Go to the [Releases](https://github.com/da036b97b7c705909d6ffbd2e3349128/ArtlistIO-video-downloader/releases) page and download the latest Windows installer (.exe) or ZIP.
 
-**Using Setup.exe (Recommended)**
+**Using application.exe (Recommended)**
 1. If using the latest version. run the setup file.
-The setup will:
-    - Verify Python installation.
-    - Install dependencies via Pipenv.
-    - Launch the local web server and open your browser to http://127.0.0.1:8000.
-    - Enter the Artlist URL, select your resolution, and click Convert. The video will appear in your Videos/ArtlistVideos folder automatically.
 
 **Using start.bat (Experimental)**
 1. If using the ZIP, run start.bat.
