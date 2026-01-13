@@ -44,7 +44,7 @@ Go to the [Releases](https://github.com/da036b97b7c705909d6ffbd2e3349128/Artlist
 
 3. Run the following command **once** to give the script permission to run: `chmod +x start.sh`
 
-4. Double-click start.command.
+4. Double-click the script.
 
 5. The script will:
     - Display the License agreement (type yes to continue).
