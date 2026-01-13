@@ -39,19 +39,10 @@ Go to the [Releases](https://github.com/da036b97b7c705909d6ffbd2e3349128/Artlist
 ### macOS
 
 1. Download the latest macOS ZIP from the [Releases](https://github.com/da036b97b7c705909d6ffbd2e3349128/ArtlistIO-video-downloader/releases) page.
-
 2. Extract the folder and open a Terminal in that directory.
-
 3. Run the following command **once** to give the script permission to run: `chmod +x start.sh`
-
 4. Double-click the script.
-
-5. The script will:
-    - Display the License agreement (type yes to continue).
-    - Check for Homebrew and Python (will install them automatically if missing).
-    - Install all dependencies and launch the server.
-
-6. Access the UI at http://127.0.0.1:8000.
+5. Access the UI at http://127.0.0.1:8000.
 
 ### Linux systems
 Still working on a script for linux users, but for now you can follow the same format as the macOS zip.
