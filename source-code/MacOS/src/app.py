@@ -9,7 +9,7 @@ def resource_path(relative_path):
     try:
         base_path = sys._MEIPASS
     except Exception:
-        base_path = os.path.abspath(".")
+        base_path = os.path.dirname(os.path.abspath(__file__))
     return os.path.join(base_path, relative_path)
 
 app = FastAPI()
@@ -55,7 +55,7 @@ async def ws_endpoint(ws: WebSocket):
 
         ws_logger("Searching for video stream...")
         try:
-            if finalize(resolution, url, logger=ws_logger): logger.success()
+            if finalize(resolution, url): logger.success()
             else: logger.fail()
         except Exception as e:
             ws_logger(f"Error: {str(e)}")

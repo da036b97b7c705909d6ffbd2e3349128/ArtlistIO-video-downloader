@@ -1,8 +1,9 @@
-import subprocess, os, time, sys, re
+import subprocess, os, time, sys, re, shutil
 from playwright.sync_api import sync_playwright
 
-BRAVE_EXE_PATH = os.path.abspath(os.path.join("Brave-Browser", "Contents", "MacOS", "Brave Browser"))
-FFMPEG_PATH = os.path.abspath(os.path.join("ffmpeg", "bin", "ffmpeg"))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BRAVE_EXE_PATH = os.path.abspath(os.path.join(BASE_DIR, "Brave-Browser", "Contents", "MacOS", "Brave Browser"))
+FFMPEG_PATH = "ffmpeg"
 VIDEO_DIR = os.path.join(os.path.expanduser("~"), "Movies", "ArtlistVideos")
 os.makedirs(VIDEO_DIR, exist_ok=True)
 
@@ -23,7 +24,7 @@ def convert(m3u8_url, sel_res, logger=print):
             count += 1
         os.rename(latest_file, os.path.join(VIDEO_DIR, f"output_{count}.mp4"))
 
-    if not os.path.exists(FFMPEG_PATH):
+    if not shutil.which(FFMPEG_PATH):
         logger(f'FFMPEG NOT FOUND AT: {FFMPEG_PATH}')
         return
     
